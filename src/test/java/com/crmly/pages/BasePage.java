@@ -30,7 +30,7 @@ public abstract class BasePage {
     public void login(){
         Driver.getDriver().get("https://login.crmly.net/");
         uSERLOGINInput.sendKeys("helpdesk61@cybertekschool.com");
-        uSERPASSWORDInput.sendKeys("UserUser123");
+        uSERPASSWORDInput.sendKeys("UserUser");
         loginbtnInput.click();
         
     }

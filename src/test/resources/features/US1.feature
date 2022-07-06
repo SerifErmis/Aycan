@@ -33,12 +33,19 @@ Feature:User should be able to add link, insert video, mention, quote, add tag i
     Then user should not be able to save without "link text" URL
 
   @REM-1315 @REM-1312
-  Scenario:Verify user should be able to insert YouTube and Vimeo video.
+  Scenario Outline:Verify user should be able to insert YouTube and Vimeo video.
     When user click insert video button
-    And user enters URL link "https://vimeo.com/500827697/"from youtube or vimeo
+    And user enters URL link "<vimeo or youtube>" from youtube or vimeo
     And user click save button
     And user click send message button
     Then user should see video in the message
+    But user see error on the screen
+    Examples:
+    |vimeo or youtube|
+    |https://vimeo.com/500827697|
+    |https://www.youtube.com/watch?v=y2tEPmwWEiI&list=RDy2tEPmwWEiI&start_radio=1|
+
+
 
   @REM-1316 @REM-1312
   Scenario: Verify user should be able to add quotes.

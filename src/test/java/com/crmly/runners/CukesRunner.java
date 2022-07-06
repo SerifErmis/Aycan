@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/crmly/step_definitions",
         dryRun = false,
-        tags = "@REM-1320",
+        tags = "@REM-1315",
         publish = false
 
 )

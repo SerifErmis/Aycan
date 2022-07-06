@@ -116,11 +116,10 @@ public class MyStepdefs {
     }
 
 
-    @And("user enters URL link {string}from youtube or vimeo")
+    @And("user enters URL link {string} from youtube or vimeo")
     public void userEntersURLLinkFromYoutubeOrVimeo(String URLLink) {
         dashboardPage.videoSourceInput.sendKeys(URLLink);
-        BrowserUtils.waitFor(10);
-       // BrowserUtils.waitForVisibility(dashboardPage.videoCheck, 10);
+        BrowserUtils.waitForVisibility(dashboardPage.videoCheck, 30);
     }
 
 
@@ -183,4 +182,10 @@ public class MyStepdefs {
     }
 
 
+
+
+    @But("user see error on the screen")
+    public void userSeeErrorOnTheScreen() {
+        System.out.println("Unexpected VD403 error seen on the screen");
+    }
 }

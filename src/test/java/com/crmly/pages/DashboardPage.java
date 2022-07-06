@@ -73,7 +73,7 @@ public class DashboardPage extends BasePage{
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendMessageButton;
 
-    @FindBy(xpath = "//iframe[contains(@src,'vimeo')]")
+    @FindBy(xpath = "//*[@class='play-icon']")
     public WebElement videoCheck;
 
     @FindBy(xpath = "//div[@id='post-tags-container-blogPostForm']//span[@class='feed-add-post-del-but']")
